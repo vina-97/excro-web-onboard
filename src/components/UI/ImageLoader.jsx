@@ -92,6 +92,7 @@ import {
   onboardBusinessGreenArrow,
   paykraftLogo,
   rugrLogo,
+  excroLogo,
 } from "../../assets/assets";
 
 const images = {
@@ -187,6 +188,7 @@ const images = {
   onboardBusinessGreenArrow,
   paykraftLogo,
   rugrLogo,
+  excroLogo,
 };
 
 const getImageByKey = (key) => {

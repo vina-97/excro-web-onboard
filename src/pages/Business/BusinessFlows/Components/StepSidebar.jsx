@@ -63,7 +63,12 @@ export default function StepSidebar({
     <div className="flex flex-col h-full">
       <div className="p-8 text-white flex flex-col flex-1">
         <div className="flex items-center mb-6">
-          <ImageLoader imageKey="rugrLogo" className="w-20 h-20" />
+          <div className="bg-white rounded-md shadow-sm flex items-center">
+            <ImageLoader
+              imageKey="excroLogo"
+              className="object-contain w-40 p-1"
+            />
+          </div>
         </div>
 
         <h2 className="h3 font-semibold mb-2">Business Onboarding</h2>

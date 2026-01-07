@@ -214,7 +214,7 @@ export default function OnboardingLayout() {
           className="hidden md:flex flex-col w-132.5 text-white fixed top-0 left-0 bottom-0"
           style={{
             background:
-              "linear-gradient(135deg, #454422 0% ,#463DFF 50%, #0497fe 100%)",
+              "linear-gradient(135deg, #0E2AC0 0% ,#463DFF 50%, #0497fe 100%)",
           }}
         >
           <div className="relative">

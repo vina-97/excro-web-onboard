@@ -105,3 +105,4 @@ export { default as onboardBusinessGreenArrow } from "./images/common-icons/onbo
 export { default as loaderIcon } from "./Lottie/Load.json";
 export { default as paykraftLogo } from "./images/common-icons/paykraft-logo.svg";
 export { default as rugrLogo } from "./images/common-icons/rugrLogo.svg";
+export { default as excroLogo } from "./images/common-icons/excro-logo.svg";

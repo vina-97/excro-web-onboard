@@ -105,7 +105,7 @@ const SSOCallback = () => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-linear-to-br from-indigo-50 via-white to-indigo-100">
       <div className="flex flex-col items-center text-center animate-pulse">
-        <ImageLoader imageKey="rugrLogo" className="w-30 h-30" />
+        <ImageLoader imageKey="excroLogo" className="w-30 h-30" />
         <h2 className="text-lg font-semibold text-gray-800 mt-5">
           Verifying your details
         </h2>
