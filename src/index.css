@@ -1,0 +1,361 @@
+@import "tailwindcss";
+@import "./assets/styles/theme.css";
+@import "./assets/styles/customStyle.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* * {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+} */
+/* Override Chrome autofill background and text */
+
+:root {
+  /* ===============================
+     🟢 Accent & Status Colors
+     =============================== */
+  --color-primary: #0051d9;
+  --color-secondary: #162854;
+  --color-pending: #c49231;
+  --color-completed: #338a38;
+  --color-submitted: #3772ff;
+  --color-rejected: #c50a0a;
+  --color-white: #ffffff;
+  --color-black: #010100;
+  --color-grey: #333333;
+  --color-purple: #5635b3;
+  --color-violet: #4f3cf6;
+
+  /* ===============================
+     🌈 PRIMARY COLOR PALETTE (Refund Blue)
+     =============================== */
+  --color-primary-refund-1: #e8f7ff;
+  --color-primary-refund-2: #d5efff;
+  --color-primary-refund-3: #b3dfff;
+  --color-primary-refund-4: #85c8ff;
+  --color-primary-refund-5: #56a2ff;
+  --color-primary-refund-6: #2f7bff;
+  --color-primary-refund-7: #0c4dff;
+  --color-primary-refund-8: #0042fe;
+  --color-primary-refund-9: #063dcd;
+  --color-primary-refund-10: #103b9f;
+  --color-primary-refund-11: #0a205c;
+
+  /* ===============================
+     🔴 SECONDARY COLOR PALETTE (Refund Red)
+     =============================== */
+  --color-red-1: #fff0f0;
+  --color-red-2: #ffdddd;
+  --color-red-3: #ffc0c0;
+  --color-red-4: #ff9494;
+  --color-red-5: #ff5857;
+  --color-red-6: #ff2423;
+  --color-red-7: #fe0100;
+  --color-red-8: #d70100;
+  --color-red-9: #b10403;
+  --color-red-10: #920b0a;
+  --color-red-11: #500000;
+  --color-red-12: #e02342;
+  /* ===============================
+     ⚙️ Neutral / Base Theme
+     =============================== */
+  --color-primary-theme-1: #e6efff; /* Main blue accent */
+  --color-primary-theme-2: #b8d2ff;
+  --color-primary-theme-3: #8ab5ff;
+  --color-primary-theme-4: #5c98ff;
+  --color-primary-theme-5: #2e7bff;
+  --color-primary-theme-6: #005eff;
+  --color-primary-theme-7: #0051d9;
+  --color-primary-theme-8: #003ca3;
+  --color-primary-theme-9: #002b75;
+  --color-primary-theme-10: #001a47;
+  --color-primary-theme-11: #00091a;
+
+  /* ===============================
+     Secondary Theme
+     =============================== */
+  --color-secondary-theme-1: #ebeffa;
+  --color-secondary-theme-2: #c7d2f0;
+  --color-secondary-theme-3: #a2b6e6;
+  --color-secondary-theme-4: #7e99dd;
+  --color-secondary-theme-5: #5a7cd3;
+  --color-secondary-theme-6: #365fc9;
+  --color-secondary-theme-7: #2c4ea5;
+  --color-secondary-theme-8: #223d81;
+  --color-secondary-theme-9: #162854;
+  --color-secondary-theme-10: #0f1b38;
+  --color-secondary-theme-11: #050a14;
+  --color-primary-theme-12: #3731c3;
+
+  /* ===============================
+     Black Theme
+     =============================== */
+  --color-primary-black-1: #f6f6f6;
+  --color-primary-black-2: #e7e7e7;
+  --color-primary-black-3: #d1d1d1;
+  --color-primary-black-4: #b0b0b0;
+  --color-primary-black-5: #888888;
+  --color-primary-black-6: #6d6d6d;
+  --color-primary-black-7: #5d5d5d;
+  --color-primary-black-8: #454545;
+  --color-primary-black-9: #3d3d3d;
+  --color-primary-black-10: #222222;
+  --color-primary-black-11: #555555;
+  --color-primary-black-12: #757575;
+  --color-primary-black-13: #dfdfe1;
+  --color-primary-black-14: #f7f8f8;
+  --color-primary-black-15: #000000;
+  --color-primary-black-16: #0f0f0f;
+
+  /* ===============================
+     Purple Theme
+     =============================== */
+  --color-primary-purple-1: #8d89cf;
+  --color-primary-purple-2: #4f3cf6;
+  --color-primary-purple-3: #e9e1ff;
+
+  /* ===============================
+     violet Theme
+     =============================== */
+  --color-primary-violet-1: #4f3cf6;
+
+  /* ===============================
+     Grey Theme
+     =============================== */
+  --color-primary-grey-1: #4f4f4f;
+  --color-primary-grey-2: #828282;
+  --color-primary-grey-3: #bdbdbd;
+  --color-primary-grey-4: #e0e0e0;
+  --color-primary-grey-5: #40444c;
+  --color-primary-grey-6: #a8a8a8;
+  --color-primary-grey-7: #f0eded;
+  --color-primary-grey-8: #9ca3af;
+
+  /* ===============================
+     Yellow / Pending Theme
+     =============================== */
+  --color-primary-yellow-1: #fff9ec;
+  --color-primary-yellow-2: #fff3d3;
+  --color-primary-yellow-3: #ffe3a5;
+  --color-primary-yellow-4: #ffcd6d;
+  --color-primary-yellow-5: #ffab32;
+  --color-primary-yellow-6: #ff900a;
+  --color-primary-yellow-7: #ff7800;
+  --color-primary-yellow-8: #cc5702;
+  --color-primary-yellow-9: #a1430b;
+  --color-primary-yellow-10: #82390c;
+  --color-primary-yellow-11: #461a04;
+
+  /* ===============================
+     Green / Completed Theme
+     =============================== */
+  --color-primary-green-1: #f1fcf4;
+  --color-primary-green-2: #ddfbe8;
+  --color-primary-green-3: #bef4d3;
+  --color-primary-green-4: #8beab1;
+  --color-primary-green-5: #51d787;
+  --color-primary-green-6: #2dcd69;
+  --color-primary-green-7: #1d9c51;
+  --color-primary-green-8: #1a7b42;
+  --color-primary-green-9: #1a6138;
+  --color-primary-green-10: #175030;
+  --color-primary-green-11: #072c17;
+
+  --breakpoint-2xl: 1400px; /* 1200-1400px */
+  --breakpoint-3xl: 1500px; /* 1400-1500px */
+  --breakpoint-4xl: 1600px; /* 1500-1600px */
+  --breakpoint-5xl: 1601px; /* >1600px */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  transition: background-color 9999s ease-in-out 0s;
+  background-color: white !important;
+  box-shadow: 0 0 0px 1000px white inset !important;
+  border-color: none !important;
+}
+
+.ant-modal-root .ant-modal-wrap {
+  background: rgb(0 0 0 / 0.1) !important;
+  transition: all 0.3s !important;
+}
+
+@layer utilities {
+  .animate-enter {
+    animation: enter 0.3s ease-out forwards;
+  }
+  .animate-leave {
+    animation: leave 0.3s ease-in forwards;
+  }
+  @keyframes enter {
+    from {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes leave {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10%);
+    }
+  }
+}
+
+.icon-colored {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(13%) saturate(2188%)
+    hue-rotate(83deg) brightness(95%) contrast(88%);
+}
+.icon-busine {
+  filter: brightness(0) saturate(100%) invert(69%) sepia(80%) saturate(4261%)
+    hue-rotate(310deg) brightness(94%) contrast(96%);
+}
+.onboard-business-search-container {
+  position: relative;
+  width: 300px; /* Adjust width as needed */
+}
+
+.onboard-business-search-container input {
+  width: 30vw;
+  padding: 13px 14px 13px 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.onboard-business-search-container .onboard-business-search-icon {
+  position: absolute;
+  left: 14px; /* Distance from the left edge */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px; /* Icon size */
+  pointer-events: none;
+}
+
+.onboard-business-search-container input::placeholder {
+  color: "#757575";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+}
+.onboard-business-search-container input:focus,
+.onboard-business-search-container input:hover {
+  border: 1px solid #5635b3 !important;
+  outline: none;
+}
+
+.onboard-business-search-teaxtarea-container textarea {
+  width: 100%;
+  padding: 13px 14px 13px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.onboard-business-search-teaxtarea-container textarea::placeholder {
+  color: "#757575";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+}
+.onboard-business-search-teaxtarea-container textarea:focus,
+.onboard-business-search-teaxtarea-container textarea:hover {
+  border: 1px solid #5635b3 !important;
+  outline: none;
+}
+.table-row-light td {
+  background-color: #ffffff !important;
+}
+
+.table-row-dark td {
+  background-color: #f9f7ff !important;
+}
+
+/* Optional: hover effect */
+.ant-table-tbody > tr:hover > td {
+  background-color: #f9f7ff !important;
+}
+/* hide scrollbar for Tailwind custom class */
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important;
+}
+.scrollbar-none {
+  -ms-overflow-style: none !important; /* IE 10+ */
+  scrollbar-width: none !important; /* Firefox */
+}
+.onboard-business-overflow {
+  /* position: absolute; */
+  top: 60px;
+  width: 420px;
+  background-color: #ffffff;
+  padding: 20px;
+  /* left: 40px; */
+  border-radius: 16px;
+}
+
+.onboard-business-add-overflow {
+  top: 42px;
+  width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  right: -20px;
+}
+.onboard-business-filter-tag {
+  display: flex;
+  align-items: center;
+  color: #5635b3;
+  /* font-size: 12px; */
+  font-weight: 400;
+  background-color: #9d7deb1a;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.onboard-business-list-overflow {
+  top: 65px;
+  width: 200px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  right: 25px;
+  z-index: 9999 !important;
+}
+
+.custom-onboard-table-style table {
+  width: 100%;
+}
+.custom-onboard-table-style table > thead > tr > th {
+  color: #40444c;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  border-bottom: 1px solid #efefef;
+  padding-bottom: 15px;
+  /* width:10% !important */
+}
+.custom-onboard-table-style table > tbody > tr > td {
+  padding: 10px 30px 0 0 !important;
+}
+.onboard-business-custom-icon {
+  filter: invert(50%) sepia(3%) saturate(21%) hue-rotate(90deg) brightness(90%)
+    contrast(90%) !important;
+}

@@ -1,0 +1,96 @@
+@import "./theme.css";
+
+.custom-filter-button {
+  display: inline-flex;
+  /* align-items: center; */
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background-color: var(--color-background);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.custom-filter-button:hover {
+  border-color: var(--color-primary-theme);
+}
+
+.filter-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.action-dots-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.action-dots-btn .dot {
+  width: 2.5px;
+  height: 2.5px;
+  background-color: var(--table-text);
+  border-radius: 40%;
+}
+.ant-btn-color-primary {
+  background-color: var(--color-primary-theme) !important;
+  padding: 0rem 1.5rem !important;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.ant-btn-variant-outlined,
+.ant-btn-variant-dashed {
+  background: unset !important;
+}
+
+.ant-btn-color-default {
+  box-shadow: unset !important;
+  font-size: 15px;
+}
+.confirm-btn .ant-btn-color-primary {
+  background-color: var(--color-primary-theme) !important;
+  padding: 0rem 2rem;
+  font-size: 14px;
+  border-radius: 6px;
+}
+.ant-btn {
+  gap: 0px !important;
+}
+.ant-btn-lg {
+  font-size: 16px;
+  height: 48px !important;
+  padding: 0px 15px;
+  border-radius: 2px !important;
+}
+.ant-btn:not(:disabled):focus-visible {
+  outline: unset !important;
+  outline-offset: 1px;
+  transition:
+    outline-offset 0s,
+    outline 0s;
+}
+.ant-btn-color-default {
+  /* color: #4d4d4d !important; */
+  background-color: var(--color-black) !important;
+  height: 35px;
+  font-size: 14px;
+}
+.ant-btn-color-default:hover {
+  color: #4d4d4d !important;
+  background-color: var(--color-purple) !important;
+  height: 35px;
+  font-size: 14px;
+}
+
+.ant-btn-variant-outlined:not(:disabled):not(.ant-btn-disabled):hover {
+  border-color: unset !important;
+}

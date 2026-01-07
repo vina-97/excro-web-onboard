@@ -1,0 +1,252 @@
+.ant-select-selector {
+  height: 44px !important;
+  display: flex;
+  align-items: center;
+  border-color: #edeef1 !important;
+  border-radius: 8px !important;
+  box-shadow: none;
+  /* background-color: #f7f8f8 !important; */
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+.ant-select:hover,
+.ant-select-selector:focus,
+.ant-select-selector-focused {
+  border-color: var(
+    --color-purple
+  ) !important; /* remove default blue border on focus */
+  box-shadow: none; /* remove focus outline */
+  /* background-color: #fff !important; */
+}
+.ant-select-focused .ant-select-selector,
+.ant-select-open .ant-select-selector {
+  border-color: var(
+    --color-purple
+  ) !important; /* remove default blue border on focus */
+  box-shadow: none !important; /* remove blue shadow */
+  outline: none !important; /* remove focus outline */
+  /* background-color: #fff !important; */
+}
+
+.ant-select-selection-placeholder {
+  color: #757575 !important; /* placeholder color */
+  font-size: 14px; /* font size */
+  font-weight: 400; /* optional */
+  opacity: 1 !important; /* ensure visibility */
+}
+
+.ant-select-disabled .ant-select-selector {
+  color: #767575 !important; /* text color */
+  -webkit-text-fill-color: #767575; /* Safari fix */
+  background-color: #f5f5f5 !important; /* optional background */
+  cursor: default !important;
+  font-weight: 600 !important; /* cursor style */
+}
+
+/* Optional: arrow icon color when disabled */
+.ant-select-disabled .ant-select-arrow {
+  color: #767575 !important;
+}
+
+/* Hover background for all Select options */
+.ant-select-item-option:hover {
+  background-color: #f6f3ff !important; /* your custom color */
+  color: #010101 !important; /* optional: text color */
+}
+
+/* Selected option */
+.ant-select-item-option-selected {
+  background-color: #f6f3ff !important; /* your custom selected color */
+  color: #010101 !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background-color: #f6f3ff !important; /* replace with your color */
+  color: #010101 !important; /* optional: change text color */
+}
+
+/* For selected / active item */
+.ant-dropdown-menu-item-active {
+  background-color: #f6f3ff !important;
+}
+.ant-select-single.ant-select-lg .ant-select-selector {
+  color: var(--color-black) !important;
+  border-radius: 8px !important;
+}
+.ant-select-outlined.ant-select-status-error:not(.ant-select-customize-input)
+  .ant-select-selector {
+  border: 1px solid var(--color-rejected) !important;
+}
+
+.ant-select-outlined:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: var(--color-surface);
+  border-color: var(--color-primary-black-13) !important;
+}
+
+.ant-select-multiple.ant-select-lg
+  .ant-select-selection-overflow
+  .ant-select-selection-item {
+  display: flex;
+  align-self: center;
+  flex: none;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin-block: 4px;
+  border-radius: 20px;
+  cursor: default;
+  transition:
+    font-size 0.3s,
+    line-height 0.3s,
+    height 0.3s;
+  margin-inline-end: 4px;
+  padding-inline-start: 10px;
+  padding-inline-end: 8px;
+  gap: 3px;
+}
+.ant-select-outlined.ant-select-multiple .ant-select-selection-item {
+  background: var(--color-primary-purple-3) !important;
+  border: 1px solid transparent;
+}
+.ant-select-multiple.ant-select-lg .ant-select-selection-overflow {
+  position: relative;
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  max-width: 100%;
+  gap: 4px;
+}
+.ant-select-multiple.ant-select-lg
+  .ant-select-selection-overflow
+  .ant-select-selection-item-remove {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-black) !important;
+  font-style: normal;
+  line-height: inherit;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+.ant-select-dropdown
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled)
+  .ant-select-item-option-state {
+  display: none !important;
+}
+.ant-checkbox-wrapper:not(.ant-checkbox-wrapper-disabled):hover
+  .ant-checkbox-checked:not(.ant-checkbox-disabled)
+  .ant-checkbox-inner {
+  background-color: #ffffff !important;
+  border-color: var(--color-purple) !important;
+}
+.ant-select-dropdown .ant-select-item {
+  margin: 4px 0px !important;
+}
+.custom-select .ant-select-selector {
+  height: 48px !important;
+  display: flex;
+  align-items: center;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.ant-select .ant-select-arrow {
+  height: 18px !important;
+}
+
+.custom-select__control {
+  height: 44px !important;
+  min-height: 44px !important;
+  border-color: #edeef1 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+}
+
+.custom-select__control:hover,
+.custom-select__control--is-focused {
+  border-color: var(--color-purple) !important;
+  box-shadow: none !important;
+  cursor: pointer;
+}
+
+.custom-select__placeholder {
+  color: #757575 !important;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1 !important;
+}
+
+.custom-select__single-value {
+  color: var(--color-black) !important;
+}
+
+.custom-select__control--is-disabled {
+  background-color: #f5f5f5 !important;
+  cursor: default !important;
+}
+
+.custom-select__control--is-disabled .custom-select__single-value {
+  color: #767575 !important;
+  font-weight: 600 !important;
+}
+
+.custom-select__indicator-separator {
+  display: none;
+}
+
+.custom-select__menu {
+  z-index: 9999;
+  border-radius: 8px;
+  margin-top: 4px;
+}
+
+.custom-select__menu-list {
+  padding: 4px;
+}
+
+.custom-select__option {
+  margin: 4px 0 !important;
+  border-radius: 4px;
+}
+
+.custom-select__option:hover,
+.custom-select__option--is-focused {
+  background-color: #f6f3ff !important;
+  color: #010101 !important;
+}
+
+.custom-select__option--is-selected {
+  background-color: #f6f3ff !important;
+  color: #010101 !important;
+}
+
+.custom-select__multi-value {
+  background: var(--color-primary-purple-3) !important;
+  border-radius: 20px;
+  padding: 4px 8px 4px 10px;
+  gap: 3px;
+}
+
+.custom-select__multi-value__label {
+  color: var(--color-black) !important;
+  font-weight: 500;
+}
+
+.custom-select__multi-value__remove {
+  color: var(--color-black) !important;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.custom-select__multi-value__remove:hover {
+  background-color: transparent;
+  color: var(--color-black) !important;
+}

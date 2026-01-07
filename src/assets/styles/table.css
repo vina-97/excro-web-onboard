@@ -1,0 +1,43 @@
+@import "./theme.css";
+.custom-core-table {
+  border: 0.85px solid #7575751a;
+}
+.custom-core-table .ant-table-cell {
+  /* color: var(--table-text); */
+  /* padding-left: 18px !important; */
+  color: "#333333" !important;
+  padding: 20px 24px !important;
+}
+.custom-core-table .ant-table-thead {
+  padding: 0px 24px 0px 20px !important;
+}
+.custom-core-table .ant-table-thead > tr > th {
+  background-color: #fbfbfb;
+  color: #757575;
+  font-size: 13px;
+  font-size: 13px;
+}
+.ant-table-wrapper
+  .ant-table-thead
+  > tr
+  > th:not(:last-child):not(.ant-table-selection-column):not(
+    .ant-table-row-expand-icon-cell
+  ):not([colspan])::before {
+  content: unset !important;
+}
+.custom-core-table .ant-table-tbody > tr {
+  padding: 20px 24px !important;
+}
+.custom-core-table .ant-table-tbody > tr > td {
+  color: "#333333" !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  /* line-height: 13px !important; */
+}
+
+/* .ant-table-fixed-right {
+  z-index: 9 !important;
+}
+.ant-table-body-outer {
+  overflow: visible !important;
+} */
