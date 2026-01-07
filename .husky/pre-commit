@@ -1,0 +1,22 @@
+echo "🔍 Running pre-commit checks..."
+
+# Step 1: Run ESLint with auto-fix
+echo "🔧 Running ESLint..."
+if ! npm run lint --silent; then
+  echo "❌ ESLint check failed. Please fix the issues before committing."
+  exit 1
+fi
+echo "✅ ESLint passed"
+
+# Step 2: Run Prettier
+echo "🎨 Formatting code..."
+if ! npm run format --silent; then
+  echo "❌ Prettier formatting failed. Please fix formatting issues."
+  exit 1
+fi
+echo "✅ Prettier formatting passed"
+
+# Step 3: Add auto-fixed files back
+git add .
+
+echo "✅ All checks passed. Proceeding with commit..."
